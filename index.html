@@ -6,15 +6,17 @@
     <title>AFrame</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
     <style>body{
         background-color: #e2b41d
         }
     </style>
 </head>
 <body>
-    <a-scene>
-        <a-box color="#e2b41d" height="0.5" width="0.5" depth="0.5" position="0 1 -4"></a-box>
-        <a-plane color="aqua" height="4" width="4" rotation="-90 0 0" position="0 0 -4"></a-plane>
+    <a-scene physics>
+        <a-box color="#e2b41d" height="0.5" width="10" depth="5" position="0 1 -4" static object></a-box>
+        <a-ocean color="aqua" depth="100" width="100" static object></a-ocean>
         <a-sky color="#20bbd6"></a-sky>
     </a-scene>
 </body>
